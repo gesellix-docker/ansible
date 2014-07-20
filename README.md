@@ -6,3 +6,4 @@ docker build -t=ansible .
 
 docker run -it -v ~/.vagrant.d/:/vagrant/ ansible ansible vagrant -m ping -u vagrant -vvvv --private-key=/vagrant/insecure_private_key
 
+docker run -it -v ~/.vagrant.d/:/vagrant/ ansible ansible-playbook playbooks/my-playbook.yml --private-key=/vagrant/insecure_private_key
